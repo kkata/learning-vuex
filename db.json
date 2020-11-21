@@ -71,6 +71,34 @@
           "name": "Mary Gordon"
         }
       ]
+    },
+    {
+      "id": 6599423,
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abcd",
+        "name": "abbbb"
+      },
+      "title": "wwww",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 1634339,
+      "category": "nature",
+      "organizer": {
+        "id": "abcd",
+        "name": "abbbb"
+      },
+      "title": "The forest",
+      "description": "braaa",
+      "location": "Somewhere",
+      "date": "2020-05-21T05:30:00.000Z",
+      "time": "6:00",
+      "attendees": []
     }
   ]
 }
