@@ -53,33 +53,25 @@ export const actions = {
       .catch(error => {
         const notification = {
           type: 'error',
-          message: 'There was a probrem fetching events: ' + error.message
+          message: 'There was a problem fetching events: ' + error.message
         }
         dispatch('notification/add', notification, { root: true })
       })
   },
-  fetchEvent({ commit, getters, dispatch, state }, id) {
+  fetchEvent({ commit, getters, state }, id) {
     if (id == state.event.id) {
       return state.event
     }
-    const event = getters.getEventById(id)
+    var event = getters.getEventById(id)
 
     if (event) {
       commit('SET_EVENT', event)
       return event
     } else {
-      return EventService.getEvent(id)
-        .then(response => {
-          commit('SET_EVENT', response.data)
-          return response.data
-        })
-        .catch(error => {
-          const notification = {
-            type: 'error',
-            message: 'There was a probrem fetching event: ' + error.message
-          }
-          dispatch('notification/add', notification, { root: true })
-        })
+      return EventService.getEvent(id).then(response => {
+        commit('SET_EVENT', response.data)
+        return response.data
+      })
     }
   }
 }
