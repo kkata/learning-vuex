@@ -5,7 +5,7 @@
     <template v-if="page !=1">
       <router-link :to="{name: 'event-list', query: {page: page -1}}" rel="prev">Prev Page</router-link>
     </template>
-    <router-link v-if="hasNextPage":to="{name: 'event-list', query: {page: page +1}}" rel="next">Next Page</router-link>
+    <router-link v-if="hasNextPage" :to="{name: 'event-list', query: {page: page +1}}" rel="next">Next Page</router-link>
   </div>
 </template>
 
